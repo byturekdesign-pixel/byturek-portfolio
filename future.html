@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Agency | Projekt By Turek Design</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080a12;
+    color: #fff;
+}
+
+header {
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #25283b;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span { color: #9d70ff; }
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 13px;
+}
+
+nav a:hover { color: #a77cff; }
+
+.hero {
+    min-height: 690px;
+    padding: 110px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 45%, rgba(123,65,255,.28), transparent 35%),
+        linear-gradient(120deg, #080a12, #111329);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+}
+
+.tag {
+    display: inline-block;
+    color: #b69aff;
+    border: 1px solid #7049c9;
+    padding: 10px 17px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: .98;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -4px;
+}
+
+h1 span {
+    color: #a77cff;
+}
+
+.hero p {
+    color: #aaaec4;
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    background: #9564ff;
+    color: white;
+    padding: 17px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #b18cff;
+    transform: translateY(-3px);
+}
+
+section { padding: 100px 8%; }
+
+.label {
+    color: #a77cff;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 25px;
+}
+
+.intro {
+    color: #999eb5;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 45px;
+}
+
+.services {
+    background: #101321;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service {
+    padding: 35px;
+    background: #171b2d;
+    border: 1px solid #292d45;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.service:hover {
+    transform: translateY(-7px);
+    border-color: #9564ff;
+}
+
+.service .number {
+    color: #a77cff;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.service h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: #999eb5;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-grid img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-text p {
+    color: #999eb5;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.projects {
+    background: #101321;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.project-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.contact {
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(123,65,255,.2), transparent 60%),
+        #080a12;
+}
+
+.contact p {
+    color: #999eb5;
+    margin: 20px 0 35px;
+}
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid #25283b;
+    color: #777d96;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    h1 { letter-spacing: -2px; }
+
+    section { padding: 70px 6%; }
+
+    .service-grid,
+    .about-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FUTURE<span>.</span>AGENCY</div>
+
+    <nav>
+        <a href="#o-nas">O NAS</a>
+        <a href="#uslugi">USŁUGI</a>
+        <a href="#projekty">PROJEKTY</a>
+        <a href="#kontakt">KONTAKT</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="tag">KREATYWNOŚĆ / TECHNOLOGIA / ROZWÓJ</div>
+
+        <h1>Tworzymy<br><span>przyszłość.</span></h1>
+
+        <p>
+            Pomagamy markom rozwijać się w cyfrowym świecie.
+            Projektujemy nowoczesne strony internetowe,
+            identyfikacje wizualne i rozwiązania, które robią różnicę.
+        </p>
+
+        <a href="#uslugi" class="button">POZNAJ NASZE MOŻLIWOŚCI ↗</a>
+    </div>
+</section>
+
+<section id="o-nas">
+    <div class="about-grid">
+        <div class="about-text">
+            <div class="label">Kim jesteśmy?</div>
+            <h2>Pomysły, które zmieniają zasady gry.</h2>
+
+            <p>
+                Future Agency to koncepcyjna agencja kreatywna,
+                która łączy nowoczesny design z technologią.
+            </p>
+
+            <p>
+                Wierzymy, że silna marka zaczyna się od dobrego pomysłu,
+                a kończy na doświadczeniu, które zapada w pamięć.
+            </p>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+            alt="Nowoczesne biuro agencji"
+        >
+    </div>
+</section>
+
+<section class="services" id="uslugi">
+    <div class="label">Co robimy?</div>
+    <h2>Nasze specjalizacje</h2>
+
+    <p class="intro">
+        Łączymy strategię, kreatywność i technologię,
+        aby budować silne marki w internecie.
+    </p>
+
+    <div class="service-grid">
+        <div class="service">
+            <div class="number">01 / DIGITAL</div>
+            <h3>Strony internetowe</h3>
+            <p>Nowoczesne strony, które przyciągają uwagę i pomagają rozwijać biznes.</p>
+        </div>
+
+        <div class="service">
+            <div class="number">02 / BRANDING</div>
+            <h3>Branding</h3>
+            <p>Wyrazista identyfikacja wizualna i spójny wizerunek marki.</p>
+        </div>
+
+        <div class="service">
+            <div class="number">03 / CREATIVE</div>
+            <h3>Marketing kreatywny</h3>
+            <p>Pomysły i komunikacja, które pomagają markom wyróżnić się na rynku.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projekty" class="projects">
+    <div class="label">Nasze inspiracje</div>
+    <h2>Myślimy bez ograniczeń.</h2>
+
+    <p class="intro">
+        Każdy projekt to nowe wyzwanie, pomysł
+        i możliwość stworzenia czegoś wyjątkowego.
+    </p>
+
+    <div class="project-grid">
+        <img
+            src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
+            alt="Projekt graficzny"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
+            alt="Projekt cyfrowy"
+        >
+    </div>
+</section>
+
+<section class="contact" id="kontakt">
+    <div class="label">Zróbmy coś razem</div>
+    <h2>Twój pomysł. Nasza realizacja.</h2>
+
+    <p>
+        Masz projekt, który chcesz rozwinąć?
+        Porozmawiajmy o możliwościach.
+    </p>
+
+    <a href="mailto:byturek.design@gmail.com" class="button">
+        SKONTAKTUJ SIĘ Z NAMI ↗
+    </a>
+</section>
+
+</main>
+
+<footer>
+    <span>FUTURE AGENCY — PROJEKT KONCEPCYJNY</span>
+    <span>Strona wykonana przez By Turek Design</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minimal Studio | Projekt By Turek Design</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ee;
+    color: #24231f;
+}
+
+header {
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 13px;
+}
+
+nav a:hover { color: #a18463; }
+
+.hero {
+    min-height: 650px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.1)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+
+.hero-content { max-width: 650px; }
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 450px;
+    line-height: 1.8;
+    color: #eee;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 17px 30px;
+    background: #f5f3ee;
+    color: #222;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #a18463;
+    color: white;
+}
+
+section { padding: 100px 8%; }
+
+.section-label {
+    color: #9b8060;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 600px;
+    color: #777;
+    line-height: 1.9;
+    margin-bottom: 45px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.about-text p {
+    color: #777;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.services { background: #eae7df; }
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.service {
+    padding: 35px;
+    background: #f5f3ee;
+}
+
+.service span {
+    color: #a18463;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.service h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 25px 0 15px;
+}
+
+.service p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.contact {
+    background: #24231f;
+    color: white;
+    text-align: center;
+}
+
+.contact p {
+    color: #bbb;
+    margin: 20px 0 35px;
+}
+
+.contact .button {
+    background: #c5ad91;
+}
+
+footer {
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a { margin: 0 9px; }
+
+    .hero { min-height: 550px; }
+
+    section { padding: 70px 6%; }
+
+    .about,
+    .service-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about { gap: 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MINIMAL STUDIO.</div>
+    <nav>
+        <a href="#o-nas">O NAS</a>
+        <a href="#uslugi">USŁUGI</a>
+        <a href="#galeria">GALERIA</a>
+        <a href="#kontakt">KONTAKT</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">Prostota ma znaczenie</div>
+        <h1>Mniej.<br>Znaczy więcej.</h1>
+        <p>
+            Tworzymy wyjątkowe przestrzenie i identyfikacje,
+            w których estetyka spotyka się z funkcjonalnością.
+            Odkryj piękno prostych rozwiązań.
+        </p>
+        <a href="#o-nas" class="button">POZNAJ NAS</a>
+    </div>
+</section>
+
+<section id="o-nas">
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Minimalistyczne wnętrze">
+        <div class="about-text">
+            <div class="section-label">Nasza filozofia</div>
+            <h2>Piękno tkwi w prostocie.</h2>
+            <p>
+                Minimal Studio to koncepcyjna marka stworzona
+                z miłości do estetyki, harmonii i ponadczasowego designu.
+            </p>
+            <p>
+                Wierzymy, że dobrze zaprojektowana przestrzeń
+                nie potrzebuje nadmiaru. Liczy się każdy detal,
+                odpowiednie proporcje i świadome decyzje.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="uslugi">
+    <div class="section-label">Co oferujemy</div>
+    <h2>Nasze usługi</h2>
+    <p class="intro">
+        Łączymy kreatywność z funkcjonalnością,
+        tworząc projekty dopracowane w każdym szczególe.
+    </p>
+
+    <div class="service-grid">
+        <div class="service">
+            <span>01 / DESIGN</span>
+            <h3>Projektowanie</h3>
+            <p>Przemyślane projekty graficzne i nowoczesne rozwiązania wizualne.</p>
+        </div>
+
+        <div class="service">
+            <span>02 / BRANDING</span>
+            <h3>Identyfikacja marki</h3>
+            <p>Spójny wizerunek marki, który wyróżnia się prostotą i charakterem.</p>
+        </div>
+
+        <div class="service">
+            <span>03 / WEB</span>
+            <h3>Strony internetowe</h3>
+            <p>Eleganckie, przejrzyste i wygodne w obsłudze strony internetowe.</p>
+        </div>
+    </div>
+</section>
+
+<section id="galeria">
+    <div class="section-label">Inspiracje</div>
+    <h2>Nasza estetyka</h2>
+    <p class="intro">
+        Naturalne materiały, spokojne kolory i wyjątkowe detale.
+    </p>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Eleganckie wnętrze">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Minimalistyczny salon">
+    </div>
+</section>
+
+<section class="contact" id="kontakt">
+    <div class="section-label">Porozmawiajmy</div>
+    <h2>Stwórzmy coś wyjątkowego.</h2>
+    <p>Masz pomysł? Chętnie pomożemy Ci go zrealizować.</p>
+    <a href="mailto:byturek.design@gmail.com" class="button">NAPISZ DO NAS</a>
+</section>
+
+</main>
+
+<footer>
+    <span>MINIMAL STUDIO — PROJEKT KONCEPCYJNY</span>
+    <span>Strona wykonana przez By Turek Design</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Motoryzacji | Projekt By Turek Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101010;
+            color: white;
+        }
+
+        header {
+            height: 85px;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #101010;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c4ff3d;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c4ff3d;
+        }
+
+        .hero {
+            min-height: 650px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.25)),
+                url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .tag {
+            color: #c4ff3d;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #c4ff3d;
+        }
+
+        .hero p {
+            color: #cccccc;
+            line-height: 1.8;
+            font-size: 17px;
+            max-width: 500px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c4ff3d;
+            color: #111;
+            padding: 17px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-label {
+            color: #c4ff3d;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: clamp(32px, 5vw, 50px);
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            color: #aaa;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+
+        .services {
+            background: #181818;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background: #222;
+            padding: 35px;
+            border: 1px solid #333;
+            transition: .3s;
+        }
+
+        .service:hover {
+            border-color: #c4ff3d;
+            transform: translateY(-5px);
+        }
+
+        .service .number {
+            color: #c4ff3d;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .service h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .contact {
+            background: #c4ff3d;
+            color: #111;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: #333;
+        }
+
+        .contact p {
+            margin-bottom: 30px;
+        }
+
+        .contact .button {
+            background: #111;
+            color: white;
+        }
+
+        footer {
+            padding: 30px 8%;
+            background: #101010;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                height: auto;
+                padding: 25px 6%;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 550px;
+                padding: 70px 6%;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .service-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">STUDIO<span>.</span></div>
+
+        <nav>
+            <a href="#oferta">Oferta</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="tag">Pasja do motoryzacji</div>
+
+                <h1>Twoje auto.<br><span>Nasza pasja.</span></h1>
+
+                <p>
+                    Perfekcyjny wygląd, wyjątkowy połysk i ochrona,
+                    na którą zasługuje każdy samochód.
+                    Poznaj świat profesjonalnej pielęgnacji aut.
+                </p>
+
+                <a href="#oferta" class="button">POZNAJ NASZĄ OFERTĘ</a>
+            </div>
+        </section>
+
+        <section class="services" id="oferta">
+            <div class="section-label">Co możemy zrobić?</div>
+            <h2>Nasza oferta</h2>
+
+            <p class="intro">
+                Dbamy o każdy detal. Łączymy dokładność,
+                doświadczenie i pasję do samochodów.
+            </p>
+
+            <div class="service-grid">
+                <div class="service">
+                    <div class="number">01 / DETAILING</div>
+                    <h3>Detailing</h3>
+                    <p>
+                        Dokładne czyszczenie i pielęgnacja wnętrza
+                        oraz karoserii samochodu.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="number">02 / POLEROWANIE</div>
+                    <h3>Polerowanie lakieru</h3>
+                    <p>
+                        Przywracanie głębi koloru i blasku
+                        poprzez profesjonalną korektę lakieru.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="number">03 / OCHRONA</div>
+                    <h3>Powłoki ochronne</h3>
+                    <p>
+                        Dodatkowa ochrona lakieru i łatwiejsze
+                        utrzymanie samochodu w czystości.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <div class="section-label">Motoryzacja w szczegółach</div>
+            <h2>Nasza inspiracja</h2>
+
+            <p class="intro">
+                Piękne samochody zasługują na wyjątkową oprawę.
+                Zobacz przykładowe kadry motoryzacyjne.
+            </p>
+
+            <div class="gallery-grid">
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Sportowy samochód"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=1000&q=85"
+                    alt="Samochód w ciemnej scenerii"
+                >
+            </div>
+        </section>
+
+        <section class="contact" id="kontakt">
+            <div class="section-label">Zadbaj o swoje auto</div>
+            <h2>Gotowy na zmianę?</h2>
+
+            <p>
+                Skontaktuj się z nami i poznaj możliwości
+                profesjonalnej pielęgnacji samochodu.
+            </p>
+
+            <a href="mailto:byturek.design@gmail.com" class="button">
+                NAPISZ DO NAS
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <span>Studio Motoryzacji — projekt koncepcyjny</span>
+        <span>Strona wykonana przez By Turek Design</span>
+    </footer>
+
+</body>
+</html>
